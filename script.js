@@ -1,7 +1,144 @@
-let gender = prompt("What's your gender?");
-let age = prompt("How old are you?");
-let height = prompt("What's your height in cm?");
-let weight = prompt("What's your weight in kg?");
-let physicalActivity = prompt("What's your level of physical activity (sedentary/light/moderate/heavy)?");
-let foodPreferenceRestriction = prompt("Do you have any food preference or restriction?");
+let user = {};
 
+user.gender = prompt("What's your gender (male/female)?");
+user.age = prompt("How old are you?");
+user.height = prompt("What's your height in cm?");
+user.weight = prompt("What's your weight in kg?");
+user.physicalActivity = prompt("What's your level of physical activity (sedentary/light/moderate/heavy)?");
+user.foodPreference = prompt("Do you have any food preference?");
+user.foodRestriction = prompt("Do you have any food restriction?");
+
+let menBMR = 66.47 + (13.75 * Number(user.weight)) + (5.003 * Number(user.height)) - (6.755 * Number(user.age));
+let womenBMR = 655.1 + (9.563 * Number(user.weight)) + (1.850 * Number(user.height)) - (4.676 * Number(user.age));
+
+
+
+if (user.gender == "male") {
+    alert(menBMR);
+}
+else if (user.gender == "female") {
+    alert(womenBMR);
+}
+
+
+//foods for breakfast
+let biscuits = {
+    caloriesPer100g: 353,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let cornflakes = {
+    caloriesPer100g: 357,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let yoghurt = {
+    caloriesPerServing: 124,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let milk = {
+    caloriesPer200ml: 124,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+
+// foods for lunch and dinner
+let whiteRice = {
+    caloriesPer100g: 330,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let tomatoSaucePasta = {
+    caloriesPer100g: 360,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let dressedGreenSalad = {
+    caloriesPerServing: 150,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let dressedMixedSalad = {
+    caloriesPerServing: 180,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let grilledChickenBreast = {
+    caloriesPer100g: 170,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+let bread = {
+    caloriesPer100g: 265,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+
+let apple = {
+    caloriesPer100g: 49,
+    proteins: 10,
+    carbs: 10,
+    fats: 10
+};
+
+
+
+/*Meal calculator
+- breakfast
+- lunch
+- dinner */
+
+let suggestedBreakfast;
+let suggestedLunch;
+let suggestedDinner;
+
+
+const breakfastOption1 = ["milk", "biscuits"];
+const breakfastOption2 = ["milk", "cornflakes"];
+const breakfastOption3 = ["yoghurt", "cornflakes"];
+
+const lunchOption1 = ["dressedGreenSalad", "bread", "grilledChickenBreast"];
+const lunchOption2 = ["dressedMixedSalad", "bread", "grilledChickenBreast"];
+const lunchOption3 = ["tomatoSaucePasta", "dressedGreenSalad"];
+const lunchOption4 = ["whiteRice", "dressedGreenSalad", "apple"];
+
+const dinnerOption1 = ["dressedGreenSalad", "bread", "grilledChickenBreast"];
+const dinnerOption2 = ["dressedMixedSalad", "bread", "grilledChickenBreast"];
+const dinnerOption3 = ["tomatoSaucePasta", "dressedGreenSalad"];
+const dinnerOption4 = ["whiteRice", "dressedGreenSalad", "apple"];
+
+if (breakfastOption1.includes(user.foodPreference)) {
+    alert("è presente!");
+}
+else if (breakfastOption2.includes(user.foodPreference)) {
+    alert("è presente!");
+}
+
+
+
+let sedentaryWomenBMR = womenBMR * 1.2;
+let lightActiveWomenBMR = womenBMR * 1.375;
+let moderatelyActiveWomenBMR = womenBMR * 1.55;
+let heavilyActiveWomenBMR = womenBMR * 1.9;
+
+// const selectedGender = 'male';
+
+// const formulas: {
+//   'male': (a,b,c) => a + b * c;
+//   'female': (a,b,c) => a * b + c;
+// }
+
+// const selectedFormula = formulas[selectedGender];
+
+// const result = selectedFormula(a,b,c);
