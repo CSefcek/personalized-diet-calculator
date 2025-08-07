@@ -137,27 +137,48 @@ else {
 
 if (lunchOption1.includes(user.foodPreference) && !lunchOption1.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption1;
-    alert("lunch 1 works!");
 }
 else if (lunchOption2.includes(user.foodPreference) && !lunchOption2.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption2;
-    alert("lunch 2 works!");
 }
 else if (lunchOption3.includes(user.foodPreference) && !lunchOption3.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption3;
-    alert("lunch 3 works!");
 }
 else if (lunchOption4.includes(user.foodPreference) && !lunchOption4.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption4;
-    alert("lunch 4 works!");
 }
 else if (user.foodPreference === "" || user.foodRestriction === "") {
     suggestedLunch = lunchOption1;
-    alert("edge case 1 works!");
 }
 else {
     suggestedLunch = lunchOption1;
-    alert("edge case 2 works!");
+}
+
+
+if (dinnerOption1.includes(user.foodPreference) && !dinnerOption1.includes(user.foodRestriction)) {
+    suggestedDinner = dinnerOption1;
+    alert("dinner 1 works!");
+}
+else if (dinnerOption2.includes(user.foodPreference) && !dinnerOption2.includes(user.foodRestriction)) {
+    suggestedDinner = dinnerOption2;
+    alert("dinner 2 works!");
+}
+else if (dinnerOption3.includes(user.foodPreference) && !dinnerOption3.includes(user.foodRestriction)) {
+    suggestedDinner = dinnerOption3;
+    alert("dinner 3 works!");
+}
+else if (dinnerOption4.includes(user.foodPreference) && !dinnerOption4.includes(user.foodRestriction)) {
+    suggestedDinner = dinnerOption4;
+    alert("dinner 4 works!");
+}
+
+else if (user.foodPreference === "" || user.foodPreference === "") {
+    suggestedDinner = dinnerOption1;
+    alert("dinner edge case 1 works!");
+}
+else {
+    suggestedDinner = dinnerOption1;
+    alert("dinner edge case 2 works!")
 }
 
 
