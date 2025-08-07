@@ -118,27 +118,52 @@ const dinnerOption2 = ["dressedMixedSalad", "bread", "grilledChickenBreast"];
 const dinnerOption3 = ["tomatoSaucePasta", "dressedGreenSalad"];
 const dinnerOption4 = ["whiteRice", "dressedGreenSalad", "apple"];
 
-if (breakfastOption1.includes(user.foodPreference)) {
-    alert("è presente!");
+if (breakfastOption1.includes(user.foodPreference) && !breakfastOption1.includes(user.foodRestriction)) {
+    suggestedBreakfast = breakfastOption1;
 }
-else if (breakfastOption2.includes(user.foodPreference)) {
-    alert("è presente!");
+else if (breakfastOption2.includes(user.foodPreference) && !breakfastOption2.includes(user.foodRestriction)) {
+    suggestedBreakfast = breakfastOption2;
+}
+else if (breakfastOption3.includes(user.foodPreference) && !breakfastOption3.includes(user.foodRestriction)) {
+    suggestedBreakfast = breakfastOption3;
+}
+else if (user.foodPreference === "" || user.foodRestriction === "") {
+    suggestedBreakfast = breakfastOption1;
+}
+else {
+    suggestedBreakfast = breakfastOption1;
+}
+
+
+if (lunchOption1.includes(user.foodPreference) && !lunchOption1.includes(user.foodRestriction)) {
+    suggestedLunch = lunchOption1;
+    alert("lunch 1 works!");
+}
+else if (lunchOption2.includes(user.foodPreference) && !lunchOption2.includes(user.foodRestriction)) {
+    suggestedLunch = lunchOption2;
+    alert("lunch 2 works!");
+}
+else if (lunchOption3.includes(user.foodPreference) && !lunchOption3.includes(user.foodRestriction)) {
+    suggestedLunch = lunchOption3;
+    alert("lunch 3 works!");
+}
+else if (lunchOption4.includes(user.foodPreference) && !lunchOption4.includes(user.foodRestriction)) {
+    suggestedLunch = lunchOption4;
+    alert("lunch 4 works!");
+}
+else if (user.foodPreference === "" || user.foodRestriction === "") {
+    suggestedLunch = lunchOption1;
+    alert("edge case 1 works!");
+}
+else {
+    suggestedLunch = lunchOption1;
+    alert("edge case 2 works!");
 }
 
 
 
-let sedentaryWomenBMR = womenBMR * 1.2;
-let lightActiveWomenBMR = womenBMR * 1.375;
-let moderatelyActiveWomenBMR = womenBMR * 1.55;
-let heavilyActiveWomenBMR = womenBMR * 1.9;
+// let sedentaryWomenBMR = womenBMR * 1.2;
+// let lightActiveWomenBMR = womenBMR * 1.375;
+// let moderatelyActiveWomenBMR = womenBMR * 1.55;
+// let heavilyActiveWomenBMR = womenBMR * 1.9;
 
-// const selectedGender = 'male';
-
-// const formulas: {
-//   'male': (a,b,c) => a + b * c;
-//   'female': (a,b,c) => a * b + c;
-// }
-
-// const selectedFormula = formulas[selectedGender];
-
-// const result = selectedFormula(a,b,c);
