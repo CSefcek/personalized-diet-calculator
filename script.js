@@ -10,14 +10,15 @@ user.foodRestriction = prompt("Do you have any food restriction?");
 
 let menBMR = 66.47 + (13.75 * Number(user.weight)) + (5.003 * Number(user.height)) - (6.755 * Number(user.age));
 let womenBMR = 655.1 + (9.563 * Number(user.weight)) + (1.850 * Number(user.height)) - (4.676 * Number(user.age));
+let caloriesIntake;
 
 
 
 if (user.gender == "male") {
-    alert(menBMR);
+    caloriesIntake = menBMR;
 }
 else if (user.gender == "female") {
-    alert(womenBMR);
+    caloriesIntake = womenBMR;
 }
 
 
@@ -104,19 +105,34 @@ let suggestedLunch;
 let suggestedDinner;
 
 
-const breakfastOption1 = ["milk", "biscuits"];
-const breakfastOption2 = ["milk", "cornflakes"];
-const breakfastOption3 = ["yoghurt", "cornflakes"];
+const breakfastOption1 = ["milk", " biscuits"];
+const breakfastOption2 = ["milk", " cornflakes"];
+const breakfastOption3 = ["yoghurt", " cornflakes"];
 
-const lunchOption1 = ["dressedGreenSalad", "bread", "grilledChickenBreast"];
-const lunchOption2 = ["dressedMixedSalad", "bread", "grilledChickenBreast"];
-const lunchOption3 = ["tomatoSaucePasta", "dressedGreenSalad"];
-const lunchOption4 = ["whiteRice", "dressedGreenSalad", "apple"];
+const lunchOption1 = ["dressedGreenSalad", " bread", " grilledChickenBreast"];
+const lunchOption2 = ["dressedMixedSalad", " bread", " grilledChickenBreast"];
+const lunchOption3 = ["tomatoSaucePasta", " dressedGreenSalad"];
+const lunchOption4 = ["whiteRice", " dressedGreenSalad", " apple"];
 
-const dinnerOption1 = ["dressedGreenSalad", "bread", "grilledChickenBreast"];
-const dinnerOption2 = ["dressedMixedSalad", "bread", "grilledChickenBreast"];
-const dinnerOption3 = ["tomatoSaucePasta", "dressedGreenSalad"];
-const dinnerOption4 = ["whiteRice", "dressedGreenSalad", "apple"];
+const dinnerOption1 = ["dressedGreenSalad", " bread", " grilledChickenBreast"];
+const dinnerOption2 = ["dressedMixedSalad", " bread", " grilledChickenBreast"];
+const dinnerOption3 = ["tomatoSaucePasta", " dressedGreenSalad"];
+const dinnerOption4 = ["whiteRice", " dressedGreenSalad", " apple"];
+
+const breakfastOption1Kcal = milk.caloriesPer200ml + biscuits.caloriesPer100g;
+const breakfastOption2Kcal = milk.caloriesPer200ml + cornflakes.caloriesPer100g;
+const breakfastOption3Kcal = yoghurt.caloriesPerServing + cornflakes.caloriesPer100g;
+
+const lunchOption1Kcal = dressedGreenSalad.caloriesPerServing + bread.caloriesPer100g + grilledChickenBreast.caloriesPer100g;
+const lunchOption2Kcal = dressedMixedSalad.caloriesPerServing + bread.caloriesPer100g + grilledChickenBreast.caloriesPer100g;
+const lunchOption3Kcal = tomatoSaucePasta.caloriesPer100g + dressedGreenSalad.caloriesPerServing;
+const lunchOption4Kcal = whiteRice.caloriesPer100g + dressedGreenSalad.caloriesPerServing + apple.caloriesPer100g;
+
+const dinnerOption1Kcal = lunchOption1Kcal;
+const dinnerOption2Kcal = lunchOption2Kcal;
+const dinnerOption3Kcal = lunchOption3Kcal;
+const dinnerOption4Kcal = lunchOption4Kcal;
+
 
 if (breakfastOption1.includes(user.foodPreference) && !breakfastOption1.includes(user.foodRestriction)) {
     suggestedBreakfast = breakfastOption1;
@@ -157,29 +173,30 @@ else {
 
 if (dinnerOption1.includes(user.foodPreference) && !dinnerOption1.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption1;
-    alert("dinner 1 works!");
 }
 else if (dinnerOption2.includes(user.foodPreference) && !dinnerOption2.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption2;
-    alert("dinner 2 works!");
 }
 else if (dinnerOption3.includes(user.foodPreference) && !dinnerOption3.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption3;
-    alert("dinner 3 works!");
 }
 else if (dinnerOption4.includes(user.foodPreference) && !dinnerOption4.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption4;
-    alert("dinner 4 works!");
 }
 
 else if (user.foodPreference === "" || user.foodPreference === "") {
     suggestedDinner = dinnerOption1;
-    alert("dinner edge case 1 works!");
 }
 else {
     suggestedDinner = dinnerOption1;
-    alert("dinner edge case 2 works!")
 }
+
+alert(suggestedBreakfast);
+alert(typeof suggestedBreakfast);
+alert(suggestedLunch);
+alert(typeof suggestedLunch);
+alert(suggestedDinner);
+alert(typeof suggestedDinner);
 
 
 
