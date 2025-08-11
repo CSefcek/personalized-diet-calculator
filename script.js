@@ -104,20 +104,24 @@ let suggestedBreakfast;
 let suggestedLunch;
 let suggestedDinner;
 
+let suggestedBreakfastKcal;
+let suggestedLunchKcal;
+let suggestedDinnerKcal;
 
-const breakfastOption1 = ["milk", " biscuits"];
-const breakfastOption2 = ["milk", " cornflakes"];
-const breakfastOption3 = ["yoghurt", " cornflakes"];
 
-const lunchOption1 = ["dressedGreenSalad", " bread", " grilledChickenBreast"];
-const lunchOption2 = ["dressedMixedSalad", " bread", " grilledChickenBreast"];
-const lunchOption3 = ["tomatoSaucePasta", " dressedGreenSalad"];
-const lunchOption4 = ["whiteRice", " dressedGreenSalad", " apple"];
+const breakfastOption1 = ["milk (200ml)", " biscuits (100g)"];
+const breakfastOption2 = ["milk (200ml)", " cornflakes (100g)"];
+const breakfastOption3 = ["yoghurt (125g)", " cornflakes (100g)"];
 
-const dinnerOption1 = ["dressedGreenSalad", " bread", " grilledChickenBreast"];
-const dinnerOption2 = ["dressedMixedSalad", " bread", " grilledChickenBreast"];
-const dinnerOption3 = ["tomatoSaucePasta", " dressedGreenSalad"];
-const dinnerOption4 = ["whiteRice", " dressedGreenSalad", " apple"];
+const lunchOption1 = ["Dressed green salad (1 bowl)", " bread (100g)", " grilled chicken breast (100g)"];
+const lunchOption2 = ["Dressed mixed salad (1 bowl)", " bread (100g)", " grilled chicken breast (100g)"];
+const lunchOption3 = ["Tomato sauce pasta (100g)", " dressed green salad (1 bowl)"];
+const lunchOption4 = ["White rice (100g)", " dressed green salad (1 bowl)", " an apple"];
+
+const dinnerOption1 = ["Dressed green salad (1 bowl)", " bread (100g)", " grilled chicken breast (100g)"];
+const dinnerOption2 = ["Dressed mixed salad (1 bowl)", " bread (100g)", " grilled chicken breast (100g)"];
+const dinnerOption3 = ["Tomato sauce pasta (100g)", " dressed green salad (1 bowl)"];
+const dinnerOption4 = ["White rice (100g)", " dressed green salad (1 bowl)", " an apple"];
 
 const breakfastOption1Kcal = milk.caloriesPer200ml + biscuits.caloriesPer100g;
 const breakfastOption2Kcal = milk.caloriesPer200ml + cornflakes.caloriesPer100g;
@@ -136,67 +140,89 @@ const dinnerOption4Kcal = lunchOption4Kcal;
 
 if (breakfastOption1.includes(user.foodPreference) && !breakfastOption1.includes(user.foodRestriction)) {
     suggestedBreakfast = breakfastOption1;
+    suggestedBreakfastKcal = breakfastOption1Kcal;
 }
 else if (breakfastOption2.includes(user.foodPreference) && !breakfastOption2.includes(user.foodRestriction)) {
     suggestedBreakfast = breakfastOption2;
+    suggestedBreakfastKcal = breakfastOption2Kcal;
 }
 else if (breakfastOption3.includes(user.foodPreference) && !breakfastOption3.includes(user.foodRestriction)) {
     suggestedBreakfast = breakfastOption3;
+    suggestedBreakfastKcal = breakfastOption3Kcal;
 }
 else if (user.foodPreference === "" || user.foodRestriction === "") {
     suggestedBreakfast = breakfastOption1;
+    suggestedBreakfastKcal = breakfastOption1Kcal;
 }
 else {
     suggestedBreakfast = breakfastOption1;
+    suggestedBreakfastKcal = breakfastOption1Kcal;
 }
 
 
 if (lunchOption1.includes(user.foodPreference) && !lunchOption1.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption1;
+    suggestedLunchKcal = lunchOption1Kcal;
 }
 else if (lunchOption2.includes(user.foodPreference) && !lunchOption2.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption2;
+    suggestedLunchKcal = lunchOption2Kcal;
 }
 else if (lunchOption3.includes(user.foodPreference) && !lunchOption3.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption3;
+    suggestedLunchKcal = lunchOption3Kcal;
 }
 else if (lunchOption4.includes(user.foodPreference) && !lunchOption4.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption4;
+    suggestedLunchKcal = lunchOption4Kcal;
 }
 else if (user.foodPreference === "" || user.foodRestriction === "") {
     suggestedLunch = lunchOption1;
+    suggestedLunchKcal = lunchOption1Kcal;
 }
 else {
     suggestedLunch = lunchOption1;
+    suggestedLunchKcal = lunchOption1Kcal;
 }
 
 
 if (dinnerOption1.includes(user.foodPreference) && !dinnerOption1.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption1;
+    suggestedDinnerKcal = dinnerOption1Kcal;
 }
 else if (dinnerOption2.includes(user.foodPreference) && !dinnerOption2.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption2;
+    suggestedDinnerKcal = dinnerOption2Kcal;
 }
 else if (dinnerOption3.includes(user.foodPreference) && !dinnerOption3.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption3;
+    suggestedDinnerKcal = dinnerOption3Kcal;
 }
 else if (dinnerOption4.includes(user.foodPreference) && !dinnerOption4.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption4;
+    suggestedDinnerKcal = dinnerOption4Kcal;
 }
 
 else if (user.foodPreference === "" || user.foodPreference === "") {
     suggestedDinner = dinnerOption1;
+    suggestedDinnerKcal = dinnerOption1Kcal;
 }
 else {
     suggestedDinner = dinnerOption1;
+    suggestedDinnerKcal = dinnerOption1Kcal;
 }
 
-alert(suggestedBreakfast);
-alert(typeof suggestedBreakfast);
-alert(suggestedLunch);
-alert(typeof suggestedLunch);
-alert(suggestedDinner);
-alert(typeof suggestedDinner);
+
+if (caloriesIntake >= (suggestedBreakfastKcal + suggestedLunchKcal + suggestedDinnerKcal)) {
+    alert(`Your breakfast is: ${suggestedBreakfast}.`);
+    alert(`Your lunch is: ${suggestedLunch}.`);
+    alert(`Your dinner is: ${suggestedDinner}.`);
+}
+else {
+    alert(`You better fast, there is no meal for your case!`);
+}
+
+alert("Thanks for using this diet calculator!")
 
 
 
