@@ -1,12 +1,12 @@
 let user = {};
 
-user.gender = prompt("What's your gender (male/female)?");
-user.age = prompt("How old are you?");
-user.height = prompt("What's your height in cm?");
-user.weight = prompt("What's your weight in kg?");
-user.physicalActivity = prompt("What's your level of physical activity (sedentary/light/moderate/heavy)?");
-user.foodPreference = prompt("Do you have any food preference?");
-user.foodRestriction = prompt("Do you have any food restriction?");
+// user.gender = prompt("What's your gender (male/female)?");
+// user.age = prompt("How old are you?");
+// user.height = prompt("What's your height in cm?");
+// user.weight = prompt("What's your weight in kg?");
+// user.physicalActivity = prompt("What's your level of physical activity (sedentary/light/moderate/heavy)?");
+// user.foodPreference = prompt("Do you have any food preference?");
+// user.foodRestriction = prompt("Do you have any food restriction?");
 
 let menBMR = 66.47 + (13.75 * Number(user.weight)) + (5.003 * Number(user.height)) - (6.755 * Number(user.age));
 let womenBMR = 655.1 + (9.563 * Number(user.weight)) + (1.850 * Number(user.height)) - (4.676 * Number(user.age));
@@ -137,12 +137,10 @@ const dinnerOption2Kcal = lunchOption2Kcal;
 const dinnerOption3Kcal = lunchOption3Kcal;
 const dinnerOption4Kcal = lunchOption4Kcal;
 
+suggestedBreakfast = breakfastOption1;
+suggestedBreakfastKcal = breakfastOption1Kcal;
 
-if (breakfastOption1.includes(user.foodPreference) && !breakfastOption1.includes(user.foodRestriction)) {
-    suggestedBreakfast = breakfastOption1;
-    suggestedBreakfastKcal = breakfastOption1Kcal;
-}
-else if (breakfastOption2.includes(user.foodPreference) && !breakfastOption2.includes(user.foodRestriction)) {
+if (breakfastOption2.includes(user.foodPreference) && !breakfastOption2.includes(user.foodRestriction)) {
     suggestedBreakfast = breakfastOption2;
     suggestedBreakfastKcal = breakfastOption2Kcal;
 }
@@ -150,21 +148,12 @@ else if (breakfastOption3.includes(user.foodPreference) && !breakfastOption3.inc
     suggestedBreakfast = breakfastOption3;
     suggestedBreakfastKcal = breakfastOption3Kcal;
 }
-else if (user.foodPreference === "" || user.foodRestriction === "") {
-    suggestedBreakfast = breakfastOption1;
-    suggestedBreakfastKcal = breakfastOption1Kcal;
-}
-else {
-    suggestedBreakfast = breakfastOption1;
-    suggestedBreakfastKcal = breakfastOption1Kcal;
-}
 
 
-if (lunchOption1.includes(user.foodPreference) && !lunchOption1.includes(user.foodRestriction)) {
-    suggestedLunch = lunchOption1;
-    suggestedLunchKcal = lunchOption1Kcal;
-}
-else if (lunchOption2.includes(user.foodPreference) && !lunchOption2.includes(user.foodRestriction)) {
+suggestedLunch = lunchOption1;
+suggestedLunchKcal = lunchOption1Kcal;
+
+if (lunchOption2.includes(user.foodPreference) && !lunchOption2.includes(user.foodRestriction)) {
     suggestedLunch = lunchOption2;
     suggestedLunchKcal = lunchOption2Kcal;
 }
@@ -176,21 +165,12 @@ else if (lunchOption4.includes(user.foodPreference) && !lunchOption4.includes(us
     suggestedLunch = lunchOption4;
     suggestedLunchKcal = lunchOption4Kcal;
 }
-else if (user.foodPreference === "" || user.foodRestriction === "") {
-    suggestedLunch = lunchOption1;
-    suggestedLunchKcal = lunchOption1Kcal;
-}
-else {
-    suggestedLunch = lunchOption1;
-    suggestedLunchKcal = lunchOption1Kcal;
-}
 
 
-if (dinnerOption1.includes(user.foodPreference) && !dinnerOption1.includes(user.foodRestriction)) {
-    suggestedDinner = dinnerOption1;
-    suggestedDinnerKcal = dinnerOption1Kcal;
-}
-else if (dinnerOption2.includes(user.foodPreference) && !dinnerOption2.includes(user.foodRestriction)) {
+suggestedDinner = dinnerOption1;
+suggestedDinnerKcal = dinnerOption1Kcal;
+
+if (dinnerOption2.includes(user.foodPreference) && !dinnerOption2.includes(user.foodRestriction)) {
     suggestedDinner = dinnerOption2;
     suggestedDinnerKcal = dinnerOption2Kcal;
 }
@@ -203,14 +183,6 @@ else if (dinnerOption4.includes(user.foodPreference) && !dinnerOption4.includes(
     suggestedDinnerKcal = dinnerOption4Kcal;
 }
 
-else if (user.foodPreference === "" || user.foodPreference === "") {
-    suggestedDinner = dinnerOption1;
-    suggestedDinnerKcal = dinnerOption1Kcal;
-}
-else {
-    suggestedDinner = dinnerOption1;
-    suggestedDinnerKcal = dinnerOption1Kcal;
-}
 
 
 if (caloriesIntake >= (suggestedBreakfastKcal + suggestedLunchKcal + suggestedDinnerKcal)) {
