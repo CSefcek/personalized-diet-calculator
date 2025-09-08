@@ -190,11 +190,11 @@ if (caloriesIntake >= (suggestedBreakfastKcal + suggestedLunchKcal + suggestedDi
     alert(`Your lunch is: ${suggestedLunch}.`);
     alert(`Your dinner is: ${suggestedDinner}.`);
 }
-else {
-    alert(`You better fast, there is no meal for your case!`);
-}
+// else {
+//     alert(`You better fast, there is no meal for your case!`);
+// }
 
-alert("Thanks for using this diet calculator!")
+// alert("Thanks for using this diet calculator!")
 
 
 
