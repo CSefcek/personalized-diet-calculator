@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Personalized Diet Calculator</title>
 </head>
 <body>
+    <h1>Personalized Diet Calculator</h1>
+    
+    <form>
+        <p>What's your gender?</p>
+        <input type="radio" id="Male" name="gender" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="gender" value="Female">
+        <label for="Female">Female</label>
+        <p>How old are you?</p>
+        <label for="age">Type your age (in digits):</label>
+        <input type="text" id="age" name="age">
+        <p>What's your height in cm?</p>
+        <label for="height">Type your height (in digits):</label>
+        <input type="text" id="height" name="height">
+        <p>What's your weight in kg?</p>
+        <label for="weight">Type your weight (in digits):</label>
+        <input type="text" id="weight" name="weight">
+        <p>What's your level of physical activity?</p>
+        <input type="radio" id="Sedentary" name="activity" value="Sedentary">
+        <label for="Sedentary">Sedentary</label>
+        <input type="radio" id="Light" name="activity" value="Light">
+        <label for="Light">Light</label>
+        <input type="radio" id="Moderate" name="activity" value="Moderate">
+        <label for="Moderate">Moderate</label>
+        <input type="radio" id="Heavy" name="activity" value="Heavy">
+        <label for="Heavy">Heavy</label>
+        <p>Do you have any food preference?</p>
+        <label for="foodpreference">Type your food preference (if any):</label>
+        <input type="text" id="foodpreference" name="foodpreference">
+        <p>Do you have any food restriction?</p>
+        <label for="foodrestriction">Type your food restriction (if any):</label>
+        <input type="text" id="foodrestriction" name="foodrestriction"><br><br><br>
+        <input type="submit" value="Submit">
+    </form>
     <script src="script.js"></script>
 </body>
 </html>
