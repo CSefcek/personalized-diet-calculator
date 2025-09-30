@@ -44,3 +44,28 @@ fieldset:has(input[type="text"]) {
     gap: 1rem;
   }
 }
+
+input[type="text"] {
+  outline: 2px solid aqua;
+  outline-offset: 2px;
+}
+
+button {
+    background-color: #8481d0;
+    border-radius: 7px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4ms;
+}
+
+button:hover {
+    background-color: #5b56d8;
+    color: white;
+}
+
+
