@@ -3,6 +3,8 @@
   --font-size--ratio: 1.2;
   
   font-size: 0.625em;
+  color: #5b56d8;
+  background-color: #0c0220;
 }
 
 body {
@@ -45,13 +47,13 @@ fieldset:has(input[type="text"]) {
   }
 }
 
-input[type="text"] {
-  outline: 2px solid aqua;
+input:focus[type="text"] {
+  outline: 2px solid #5b56d8;
   outline-offset: 2px;
 }
 
 button {
-    background-color: #8481d0;
+    background-color: #726fd1;
     border-radius: 7px;
     color: white;
     padding: 15px 32px;
@@ -61,6 +63,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition-duration: 0.4ms;
+    margin-top: 1rem;
 }
 
 button:hover {
