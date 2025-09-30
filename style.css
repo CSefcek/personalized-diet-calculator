@@ -47,9 +47,17 @@ fieldset:has(input[type="text"]) {
   }
 }
 
+input[type="text"] {
+  border-radius: 4px;
+  background-color: #0c0220;
+}
+
 input:focus[type="text"] {
+  border-color: #fbfbfb;
+  border-width: 1px;
   outline: 2px solid #5b56d8;
   outline-offset: 2px;
+  transition-duration: 40ms;
 }
 
 button {
