@@ -50,6 +50,8 @@ fieldset:has(input[type="text"]) {
 input[type="text"] {
   border-radius: 4px;
   background-color: #0c0220;
+  border-color: #a0a0a0;
+  height: 24px;
 }
 
 input:focus[type="text"] {
@@ -77,6 +79,11 @@ button {
 button:hover {
     background-color: #5b56d8;
     color: white;
+}
+
+form {
+  border: 1px solid #777777;
+  border-radius: 6px;
 }
 
 
