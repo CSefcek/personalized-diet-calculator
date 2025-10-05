@@ -47,7 +47,13 @@ fieldset:has(input[type="text"]) {
   }
 }
 
+fieldset {
+  border: 1px solid #777777;
+  border-radius: 4px;
+}
+
 input[type="text"] {
+  border: 1px solid #777777;
   border-radius: 4px;
   background-color: #0c0220;
   border-color: #a0a0a0;
