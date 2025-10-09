@@ -1,4 +1,7 @@
-let user = {};
+// TODO: valorizzare i campi di questo oggeto a partire dal formData dell'elemento form all'evento submit
+//       1. aggiungere un addEventListener per l'evento submit dell'elemento form (https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+//       2. leggere dall'elemento form i dati tramite l'API formData (https://developer.mozilla.org/en-US/docs/Web/API/FormData)
+//       3. valorizzare l'oggetto user con i dati del formData
 
 // user.gender = prompt("What's your gender (male/female)?");
 // user.age = prompt("How old are you?");
@@ -7,6 +10,8 @@ let user = {};
 // user.physicalActivity = prompt("What's your level of physical activity (sedentary/light/moderate/heavy)?");
 // user.foodPreference = prompt("Do you have any food preference?");
 // user.foodRestriction = prompt("Do you have any food restriction?");
+
+let user = {};
 
 let menBMR = 66.47 + (13.75 * Number(user.weight)) + (5.003 * Number(user.height)) - (6.755 * Number(user.age));
 let womenBMR = 655.1 + (9.563 * Number(user.weight)) + (1.850 * Number(user.height)) - (4.676 * Number(user.age));
