@@ -1,0 +1,25 @@
+{
+  "name": "personalized-diet-calculator",
+  "version": "1.0.0",
+  "description": "A personalized diet calculator which, based on the information provided by the user regarding their caloric needs and food preferences, automatically generates a balanced daily food plan.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSefcek/personalized-diet-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CSefcek/personalized-diet-calculator/issues"
+  },
+  "homepage": "https://github.com/CSefcek/personalized-diet-calculator#readme",
+  "devDependencies": {
+    "vite": "^7.1.10"
+  }
+}
