@@ -3,13 +3,14 @@
 //       2. leggere dall'elemento form i dati tramite l'API formData (https://developer.mozilla.org/en-US/docs/Web/API/FormData)
 //       3. valorizzare l'oggetto user con i dati del formData
 
-
+const body = document.querySelector("body");
 const form = document.querySelector("form");
 const log = document.createElement("p");
 
 function logSubmit(event) {
+    body.removeChild(form);
     log.textContent = "Form Submitted!";
-    form.appendChild(log);
+    body.appendChild(log);
     event.preventDefault(); //prevent the button to submit the form
 }
 
