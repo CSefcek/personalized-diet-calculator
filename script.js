@@ -5,10 +5,11 @@
 
 
 const form = document.querySelector("form");
-const log = document.getElementById("log");
+const log = document.createElement("p");
 
 function logSubmit(event) {
     log.textContent = "Form Submitted!";
+    form.appendChild(log);
     event.preventDefault(); //prevent the button to submit the form
 }
 
