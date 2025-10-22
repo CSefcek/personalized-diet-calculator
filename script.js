@@ -4,7 +4,7 @@
 //       3. valorizzare l'oggetto user con i dati del formData
 
 
-const form = document.getElementById("form");
+const form = document.querySelector("form");
 const log = document.getElementById("log");
 
 function logSubmit(event) {
