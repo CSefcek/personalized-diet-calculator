@@ -7,6 +7,13 @@
 const form = document.getElementById("form");
 const log = document.getElementById("log");
 
+function logSubmit(event) {
+    log.textContent = "Form Submitted!";
+    event.preventDefault();
+}
+
+form.addEventListener("submit", logSubmit);
+
 // user.gender = prompt("What's your gender (male/female)?");
 // user.age = prompt("How old are you?");
 // user.height = prompt("What's your height in cm?");
