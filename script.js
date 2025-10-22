@@ -9,7 +9,7 @@ const log = document.getElementById("log");
 
 function logSubmit(event) {
     log.textContent = "Form Submitted!";
-    event.preventDefault();
+    event.preventDefault(); //prevent the button to submit the form
 }
 
 form.addEventListener("submit", logSubmit);
