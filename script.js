@@ -3,6 +3,10 @@
 //       2. leggere dall'elemento form i dati tramite l'API formData (https://developer.mozilla.org/en-US/docs/Web/API/FormData)
 //       3. valorizzare l'oggetto user con i dati del formData
 
+
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+
 // user.gender = prompt("What's your gender (male/female)?");
 // user.age = prompt("How old are you?");
 // user.height = prompt("What's your height in cm?");
