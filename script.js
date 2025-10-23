@@ -11,7 +11,11 @@ function logSubmit(event) {
     body.removeChild(form);
     log.textContent = "Form Submitted!";
     body.appendChild(log);
-    event.preventDefault(); //prevent the button to submit the form
+    // prevent the button to submit the form
+    event.preventDefault();
+
+    // construct a FormData object, that fires the formdata event
+    new FormData(form);
 }
 
 form.addEventListener("submit", logSubmit);
