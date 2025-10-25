@@ -9,13 +9,16 @@ const log = document.createElement("p");
 
 function logSubmit(event) {
     body.removeChild(form);
-    log.textContent = "Form Submitted!";
-    body.appendChild(log);
+    // log.textContent = "Form Submitted!";
+    // body.appendChild(log);
+     
     // prevent the button to submit the form
     event.preventDefault();
-
-    // construct a FormData object, that fires the formdata event
-    new FormData(form);
+    
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    alert(data);
+   
 }
 
 form.addEventListener("submit", logSubmit);
