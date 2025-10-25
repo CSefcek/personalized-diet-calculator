@@ -7,6 +7,8 @@ const body = document.querySelector("body");
 const form = document.querySelector("form");
 const log = document.createElement("p");
 
+let user = {};
+
 function logSubmit(event) {
     body.removeChild(form);
     // log.textContent = "Form Submitted!";
@@ -17,8 +19,10 @@ function logSubmit(event) {
     
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    alert(data);
-   
+    for (const [key, value] of Object.entries(data)) {
+        console.log(`${key}: ${value}`);
+    }
+
 }
 
 form.addEventListener("submit", logSubmit);
@@ -31,7 +35,7 @@ form.addEventListener("submit", logSubmit);
 // user.foodPreference = prompt("Do you have any food preference?");
 // user.foodRestriction = prompt("Do you have any food restriction?");
 
-let user = {};
+
 
 let menBMR = 66.47 + (13.75 * Number(user.weight)) + (5.003 * Number(user.height)) - (6.755 * Number(user.age));
 let womenBMR = 655.1 + (9.563 * Number(user.weight)) + (1.850 * Number(user.height)) - (4.676 * Number(user.age));
