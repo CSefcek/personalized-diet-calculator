@@ -12,7 +12,7 @@ let user = {};
 function logSubmit(event) {
     // prevent the button to submit the form
     event.preventDefault();
-    body.removeChild(form);
+    form.style.display = "none";
     // log.textContent = "Form Submitted!";
     // body.appendChild(log);
     
