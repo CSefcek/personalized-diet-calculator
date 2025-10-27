@@ -84,6 +84,7 @@ input {
     border-radius: var(--radius);
     padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
     background-color: var(--color--dark);
+    color: var(--color--lighter-gray);
     border-color: var(--color--light-gray);
     height: 2.5rem;
   }
