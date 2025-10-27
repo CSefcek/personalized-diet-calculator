@@ -17,11 +17,8 @@ function logSubmit(event) {
     // body.appendChild(log);
     
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-    for (const [key, value] of Object.entries(data)) {
-        console.log(`${key}: ${value}`); 
-    }
-    
+    user = Object.fromEntries(formData.entries());
+    console.log(user);
 }
 
 form.addEventListener("submit", logSubmit);
