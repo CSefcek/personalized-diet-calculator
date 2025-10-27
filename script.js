@@ -10,19 +10,18 @@ const log = document.createElement("p");
 let user = {};
 
 function logSubmit(event) {
+    // prevent the button to submit the form
+    event.preventDefault();
     body.removeChild(form);
     // log.textContent = "Form Submitted!";
     // body.appendChild(log);
-     
-    // prevent the button to submit the form
-    event.preventDefault();
     
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
     for (const [key, value] of Object.entries(data)) {
-        console.log(`${key}: ${value}`);
+        console.log(`${key}: ${value}`); 
     }
-
+    
 }
 
 form.addEventListener("submit", logSubmit);
