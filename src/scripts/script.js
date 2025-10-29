@@ -2,6 +2,7 @@
 //       1. aggiungere un addEventListener per l'evento submit dell'elemento form (https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 //       2. leggere dall'elemento form i dati tramite l'API formData (https://developer.mozilla.org/en-US/docs/Web/API/FormData)
 //       3. valorizzare l'oggetto user con i dati del formData
+//       4. al submit usare i dati dell'oggetto user per mostrare l'output a destra del form   
 
 const body = document.querySelector("body");
 const form = document.querySelector("form");
