@@ -12,13 +12,15 @@ let user = {};
 function logSubmit(event) {
     // prevent the button to submit the form
     event.preventDefault();
-    form.style.display = "none";
+    // form.style.display = "none";
     // log.textContent = "Form Submitted!";
     // body.appendChild(log);
     
     const formData = new FormData(form);
     user = Object.fromEntries(formData.entries());
-    console.log(user);
+    console.log(JSON.stringify(user, null,"  "));
+    const result = form.elements["result"];
+    result.innerHTML = JSON.stringify(user);
 }
 
 form.addEventListener("submit", logSubmit);

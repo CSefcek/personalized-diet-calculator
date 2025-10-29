@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalized Diet Calculator</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form>
+          <fieldset>
+            <legend>
+              <h2>What's your gender?</h2>
+            </legend>
+            <label>
+              <input type="radio" name="gender" value="Male" />
+              Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="Female" />
+              Female
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <h2>Personal data</h2>
+            </legend>
+            <label>
+              How old are you?
+              <input
+                type="text"
+                name="age"
+                placeholder="Type your age (in digits)"
+              />
+            </label>
+
+            <label>
+              What's your height in cm?
+              <input
+                type="text"
+                name="height"
+                placeholder="Type your height (in digits)"
+              />
+            </label>
+
+            <label>
+              What's your weight in kg?
+              <input
+                type="text"
+                name="weight"
+                placeholder="Type your weight (in digits)"
+              />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <h2>What's your level of physical activity?</h2>
+            </legend>
+            <label>
+              <input type="radio" name="physicalActivity" value="sedentary" />
+              Sedentary
+            </label>
+            <label>
+              <input type="radio" name="physicalActivity" value="light" />
+              Light
+            </label>
+            <label>
+              <input type="radio" name="physicalActivity" value="moderate" />
+              Moderate
+            </label>
+            <label>
+              <input type="radio" name="physicalActivity" value="heavy" />
+              Heavy
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h2>Food preferences/restrictions</h2>
+            </legend>
+            <label>
+              Do you have any food preference?
+              <input
+                type="text"
+                name="foodPreference"
+                placeholder="Type your food preference (if any)"
+              />
+            </label>
+
+            <label>
+              Do you have any food restriction?
+              <input
+                type="text"
+                name="foodRestriction"
+                placeholder="Type your food restriction (if any)"
+              />
+            </label>
+          </fieldset>
+
+          <button type="submit">Submit</button>
+          <output name="result"></output>
+        </form>
+      </section>
+      <section>
+        <h1>Personalized Diet Calculator</h1>
+        <h2>Personalized Diet Calculator h2</h2>
+        <h3>Personalized Diet Calculator h3</h3>
+        <h4>Personalized Diet Calculator h4</h4>
+        <h5>Personalized Diet Calculator h5</h5>
+        <h6>Personalized Diet Calculator h6</h6>
+      </section>
+    </main>
+
+    <script type="module" src="./scripts/script.js"></script>
+  </body>
+</html>
+
+<!--CREARE UN'INTERFACCIA SOLO HTML CON LABEL E INPUT CHE CHIEDA LE STESSE COSE DELLE FUNZIONI
+PROMPT ATTUALMENTE COMMENTATE E ABBIA UN PULSANTE SUBMIT. UNA VOLTA PREMUTO IL PULSANTE SUBMIT
+PARTIRA' UNA FUNZIONE JAVASCRIPT CHE MOSTRERA' L'ESITO DELLA DIETA-->
