@@ -1,0 +1,34 @@
+:root {
+  --font-size--base: 1.6rem;
+  --font-size--ratio: 1.2;
+
+  font-size: 0.625em;
+}
+
+body {
+  font-size: var(--font-size--base);
+}
+
+h1 {
+  font-size: calc(1em * pow(var(--font-size--ratio), 6));
+}
+
+h2 {
+  font-size: calc(1em * pow(var(--font-size--ratio), 5));
+}
+
+h3 {
+  font-size: calc(1em * pow(var(--font-size--ratio), 4));
+}
+
+h4 {
+  font-size: calc(1em * pow(var(--font-size--ratio), 3));
+}
+
+h5 {
+  font-size: calc(1em * pow(var(--font-size--ratio), 2));
+}
+
+h6 {
+  font-size: calc(1em * var(--font-size--ratio));
+}
