@@ -22,6 +22,11 @@ function logSubmit(event) {
     console.log(JSON.stringify(user, null,"  "));
     const result = form.elements["result"];
     result.innerHTML = JSON.stringify(user);
+    
+    let dietParagraph = document.createElement('p');
+    dietParagraph.innerHTML = `<p>Considering that:</p><br> <ul><li>you are a ${user.age} years old ${user.gender}</li><li>your height is ${user.height}</li><li>your weight is ${user.weight}</li><li>your physical activity is ${user.physicalActivity}</li><li>your like ${user.foodPreference}</li><li>you don't want to eat ${user.foodRestriction}</li>`
+
+    document.body.append(dietParagraph);
 }
 
 form.addEventListener("submit", logSubmit);
